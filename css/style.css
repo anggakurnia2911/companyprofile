@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+  font-family: "Roboto-bold";
+  src: url(/font/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "Roboto-medium";
+  src: url(/font/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: "Roboto-light";
+  src: url(/font/Roboto-Thin.ttf);
+}
+
+body {
+   font-family: "Roboto-medium";
+}
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+/* navbar */
+.navbar .nav-item .nav-link{
+    color: black;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+}
+
+
+/* .carousel */
+
+.carousel-item {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carousel-item h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: "Roboto-bold";
+}
+
+.carousel-item p {
+  font-size: 1rem;
+  text-transform: capitalize;
+ 
+}
+
+.carousel-item span {
+  color: #fba90c;
+}
+.carousel-item .btn-carousel {
+  background-color: #219EBC;
+  color: white;
+  
+}
+
+
+/* about */
+.about .content {
+  background-color: #fdf9e1;
+  padding: 20px;
+}
+
+.about h3 {
+  font-size: 1rem;
+  font-family: "Roboto-medium";
+  color: #aa4806;
+  text-transform: uppercase;
+}
+
+.about h2 {
+  font-size: 1.6rem;
+  font-family: "Roboto-bold";
+  color: #d95f04;
+}
+
+.about p {
+  margin: 15px 0 30px 0;
+  line-height: 1.5rem;
+}
+
+.about .btn-read-more {
+  line-height: 0;
+  padding: 15px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #fba90c;
+  box-shadow: 0px 5px 25px rgba(65, 84, 241, 0.3);
+}
+
+.about .btn-read-more {
+  margin-left: 5px;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.about .btn-read-more:hover {
+  background-color: #023047;
+}
+
+
+/* values */
+
+.values header {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+.values header p {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-family: "Roboto-bold";
+  color: #aa4806;
+}
+
+.values .box {
+    padding: 30px;
+    box-shadow: 0px 0 5px rgba(77, 77, 77, 0.08);
+    text-align: center;
+    transition: 0.3s;
+    height: 100%; 
+}
+.values .box img{
+  padding: 30px 50px;
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+.values .box h4 {
+  font-size: 24px;
+  color: #aa4806;
+  font-family: "Roboto-bold";
+  margin-bottom: 18px;
+  text-transform: capitalize;
+}
+.values .box:hover {
+  box-shadow: 0px 0 30px rgba(49, 49, 49, 0.08);
+}
+.values .box:hover img {
+  transform: scale(1);
+}
+
+/* Contact */
+.contact header {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+.contact header p {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-family: "Roboto-bold";
+  color: #aa4806;
+}
+
+
+.contact .info-box {
+  color: #444444;
+  background: #FFF9EB;
+  padding: 20px;
+}
+
+.contact .info-box h1{
+  font-size: 4rem;
+  color: #fba90c;
+}
+.contact .info-box h3 {
+  font-size: 20px;
+  color: #aa4806;
+  font-weight: 700;
+  margin: 20px 0 10px 0;
+}
+
+.contact .info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.contact .form-regis {
+  background: #FFF9EB;
+  padding: 30px;
+  height: 100%;
+}
+.contact .form-regis input {
+  padding: 10px 15px;
+}
+.contact .form-regis textarea {
+  padding: 10px 15px;
+
+}
+
+.contact .form-regis button {
+  background-color: #fba90c;
+  color: white;
+  border: 0;
+  margin-top: 1rem;
+  
+}
+
+/* footer */
+.footer {
+  background: #EEEEEE;
+  padding: 0 0 30px 0;
+}
+.footer .text-footer{
+  text-align: center;
+  color: black;
+  margin-top: 50px;
+  font-family: "Roboto-medium";
+  letter-spacing: 2px;
+}
+.footer .logo-footer{
+  text-align:center;
+  color: black;
+}
+.footer .logo-footer a{
+  color: black;
+}
+
+  @media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{  
+    display:block; 
+    opacity: 0;  
+    visibility: hidden; 
+    transition:.3s; 
+    margin-top:0;  
+  }
+  .navbar .nav-item .nav-link {
+    border-bottom: 2px solid transparent;
+  }
+	.navbar .nav-item:hover .nav-link{ 
+    color: #fba90c; 
+    border-bottom: solid 2px #fba90c;
+    
+  }
+	.navbar .dropdown-menu.fade-down{ 
+    top:80%; 
+    transform: rotateX(-75deg); 
+    transform-origin: 0% 0%; }
+	.navbar .dropdown-menu.fade-up{ 
+    top:180%;  
+  }
+	.navbar .nav-item:hover .dropdown-menu{ 
+    transition: .3s; 
+    opacity:1; 
+    visibility:visible; 
+    top:100%; 
+    transform: rotateX(0deg); 
+  }
+}		
+
