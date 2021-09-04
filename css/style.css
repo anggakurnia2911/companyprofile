@@ -3,21 +3,8 @@
     padding: 0;
 }
 
-@font-face {
-  font-family: "Roboto-bold";
-  src: url(/font/Roboto-Bold.ttf);
-}
-@font-face {
-  font-family: "Roboto-medium";
-  src: url(/font/Roboto-Medium.ttf);
-}
-@font-face {
-  font-family: "Roboto-light";
-  src: url(/font/Roboto-Thin.ttf);
-}
-
 body {
-   font-family: "Roboto-medium";
+  font-family: 'Lato', sans-serif;
 }
 section {
   padding: 60px 0;
@@ -25,13 +12,20 @@ section {
 }
 
 /* navbar */
+.navbar .navbar-brand {
+  font-weight: 900;
+}
 .navbar .nav-item .nav-link{
     color: black;
     padding-left: 2rem;
     padding-right: 2rem;
     text-align: center;
+    font-weight: 700;
 }
-
+.navbar .dropdown-menu .dropdown-item {
+    color: black;
+    font-weight: 700;
+}
 
 /* .carousel */
 
@@ -45,12 +39,14 @@ section {
   font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-family: "Roboto-bold";
+  font-weight: bold;
 }
 
 .carousel-item p {
   font-size: 1rem;
   text-transform: capitalize;
+  font-weight: 700;
+  word-spacing: 2px;
  
 }
 
@@ -72,20 +68,21 @@ section {
 
 .about h3 {
   font-size: 1rem;
-  font-family: "Roboto-medium";
   color: #aa4806;
   text-transform: uppercase;
 }
 
 .about h2 {
   font-size: 1.6rem;
-  font-family: "Roboto-bold";
+  font-weight: bold;
   color: #d95f04;
 }
 
 .about p {
   margin: 15px 0 30px 0;
   line-height: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
 }
 
 .about .btn-read-more {
@@ -119,8 +116,8 @@ section {
 .values header p {
   text-align: center;
   text-transform: uppercase;
-  font-size: 2rem;
-  font-family: "Roboto-bold";
+  font-size: 2.5rem;
+  font-weight: 900;
   color: #aa4806;
 }
 
@@ -130,6 +127,7 @@ section {
     text-align: center;
     transition: 0.3s;
     height: 100%; 
+    
 }
 .values .box img{
   padding: 30px 50px;
@@ -139,7 +137,15 @@ section {
 .values .box h4 {
   font-size: 24px;
   color: #aa4806;
-  font-family: "Roboto-bold";
+  font-weight: bold;
+  margin-bottom: 18px;
+  text-transform: capitalize;
+}
+.values .box p {
+  font-size: 1rem;
+  color: #fba90c;
+  text-align: center;
+  font-weight: bold;
   margin-bottom: 18px;
   text-transform: capitalize;
 }
@@ -150,17 +156,19 @@ section {
   transform: scale(1);
 }
 
+
 /* Contact */
 .contact header {
   text-align: center;
   text-transform: capitalize;
   font-size: 1rem;
+  font-weight: 900;
 }
 .contact header p {
   text-align: center;
   text-transform: uppercase;
-  font-size: 2rem;
-  font-family: "Roboto-bold";
+  font-size: 2.5rem;
+  font-weight: 900;
   color: #aa4806;
 }
 
@@ -169,11 +177,18 @@ section {
   color: #444444;
   background: #FFF9EB;
   padding: 20px;
+  box-shadow: 0px 3px 10px rgba(49, 49, 49, 0.08);
 }
 
-.contact .info-box h1{
+.contact .info-box h1 a{
   font-size: 4rem;
   color: #fba90c;
+  text-decoration: none;
+}
+.contact .info-box h1 a:hover{
+  font-size: 4rem;
+  color: #aa4806;
+  text-decoration: none;
 }
 .contact .info-box h3 {
   font-size: 20px;
@@ -185,7 +200,7 @@ section {
 .contact .info-box p {
   padding: 0;
   line-height: 24px;
-  font-size: 14px;
+  font-weight: 700;
   margin-bottom: 0;
 }
 
@@ -193,14 +208,21 @@ section {
   background: #FFF9EB;
   padding: 30px;
   height: 100%;
+  padding-bottom:80px;
 }
 .contact .form-regis input {
   padding: 10px 15px;
+  border-radius: 5px;
+}
+.contact .form-regis label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: black;
 }
 .contact .form-regis textarea {
   padding: 10px 15px;
-
 }
+
 
 .contact .form-regis button {
   background-color: #fba90c;
@@ -209,6 +231,9 @@ section {
   margin-top: 1rem;
   
 }
+
+
+
 
 /* footer */
 .footer {
@@ -219,8 +244,7 @@ section {
   text-align: center;
   color: black;
   margin-top: 50px;
-  font-family: "Roboto-medium";
-  letter-spacing: 2px;
+  font-weight: 700;
 }
 .footer .logo-footer{
   text-align:center;
@@ -228,9 +252,13 @@ section {
 }
 .footer .logo-footer a{
   color: black;
+  font-weight: lighter;
 }
 
-  @media all and (min-width: 992px) {
+
+
+
+  @media only screen and (min-width: 992px) {
 	.navbar .nav-item .dropdown-menu{  
     display:block; 
     opacity: 0;  
@@ -249,7 +277,8 @@ section {
 	.navbar .dropdown-menu.fade-down{ 
     top:80%; 
     transform: rotateX(-75deg); 
-    transform-origin: 0% 0%; }
+    transform-origin: 0% 0%; 
+  }
 	.navbar .dropdown-menu.fade-up{ 
     top:180%;  
   }
@@ -258,7 +287,40 @@ section {
     opacity:1; 
     visibility:visible; 
     top:100%; 
-    transform: rotateX(0deg); 
+    transform: rotateX(0deg);
+  }
+  .navbar .nav-item .dropdown-menu .dropdown-item:hover{
+    color: #fba90c;
+    font-weight: 700;
+    background-color: #fff;
   }
 }		
 
+@media only screen and (max-width: 600px) {
+   
+  .navbar .nav-item:hover {
+    background-color: #fba90c;
+    color: white;
+  }
+  .navbar .nav-item .nav-link:hover {
+    color: white;
+    text-align: center;
+    font-weight: 700;
+}
+  .navbar .nav-item .dropdown-menu .dropdown-item:hover{
+    color: #fba90c;
+    font-weight: 700;
+    background-color: #fff;
+    text-align: center;
+  }
+  .navbar .nav-item .dropdown-menu .dropdown-item{
+    color: black;
+    font-weight: 700;
+    background-color: #fff;
+    text-align: center;
+  }
+  .contact .info-box {
+   text-align: center;
+  }
+}
+  
