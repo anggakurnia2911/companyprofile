@@ -10,10 +10,9 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="vendor/fontawesome/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="vendor/aos/aos.css">
     <title>Screening Test</title>
@@ -209,31 +208,57 @@
                     </div>
                 </div>
                 <div class="col-lg-6 form-regis">
-                    <form id="newform" action="#" class="needs-validation" novalidate>
-                        <div class="form-group p-1">
-                            <label for="username"> Username </label>
-                            <input type="text" class="form-control border-warning" id="username" name="username"
-                                required />
-                            <div class="invalid-feedback">username can`t username cannot be blank or have space</div>
-                            <div class="valid-feedback">Looks Good</div>
-                        </div>
-                        <div class="form-group p-1">
-                            <label for="email"> Email </label>
-                            <input type="email" class="form-control border-warning" name="email" id="email" required />
-                            <div id="email-validation" class="invalid-feedback">Please Check Mail again.</div>
-                        </div>
-                        <div class="form-group p-1">
-                            <label for="password"> Password </label>
-                            <input type="password" class="form-control border-warning" name="password" id="password"
-                                required />
-                            <div class="invalid-feedback">Please make sure your password contains at least (a
-                                Capital
-                                letter, a number and a
-                                special charcter).</div>
-                        </div>
-                        <button type="submit" class=" mt-4 d-block w-100 btn btn-primary">Submit</button>
-                    </form>
 
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-6">
+                            <label for="validationCustom01" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="validationCustom01" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Name must not blank!
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom02" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="validationCustom02" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Last name must not blank!
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustomUsername" class="form-label">Email</label>
+                            <div class="input-group has-validation">
+                                <input type="email" class="form-control" id="email"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                                <div class="invalid-feedback">
+                                    Please choose a email.
+                                </div>
+                                <div class="valid-feedback">
+                                    Good a email.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustom03" class="form-label">City</label>
+                            <input type="text" class="form-control" id="validationCustom03" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid city.
+                            </div>
+                            <div class="valid-feedback">
+                                City Confirmed.
+                            </div>
+                        </div>
+
+
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Submit form</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -259,7 +284,7 @@
     <script src="vendor/fontawesome/all.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
 
 
     <script>AOS.init();</script>
